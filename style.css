@@ -1,0 +1,46 @@
+html {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+
+.wrapper {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+
+#add {
+    width: 100px;
+    background-color: lightblue;
+}
+
+#link {
+    background-color: lightblue;
+}
+
+#text {
+    background-color: lightblue;
+}
+
+#human {
+    background-color: lightblue;
+}
+
+#none {
+    background-color: lightblue;
+}
+
+#true {
+    background-color: lightblue;
+}
+
+#false {
+    background-color: lightblue;
+}
