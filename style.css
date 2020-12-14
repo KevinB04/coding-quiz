@@ -3,6 +3,10 @@ html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
+#welcome-page {
+  display: block;
+}
+
 body {
     margin: 0;
     padding: 0;

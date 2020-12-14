@@ -1,3 +1,7 @@
+// Write a function definition for the start button, then update eventListener with the name of the function
+// Change attribute on div to display none
+// Create for loop
+
 console.log("Hello world!");
 
 questions = [
@@ -68,7 +72,6 @@ startButton.addEventListener("click", function() {
 
 if(hyperTextButton === true) {
   alert("Correct!");
-  return;
 } else {
   (hyperLinkButton || humanTextButton || noneOfButton);
   alert("Wrong!");
@@ -76,7 +79,6 @@ if(hyperTextButton === true) {
 
 if(trueButton === true) {
   alert("Correct!");
-  return;
 } else {
   (falseButton === true);
   alert("Wrong!"); 
@@ -84,7 +86,6 @@ if(trueButton === true) {
 
 if(nounButton === true) {
   alert("Correct!");
-  return;
 } else {
   (adjectiveButton || verbButton || adverbButton === true);
   alert("Wrong!");
