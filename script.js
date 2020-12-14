@@ -1,129 +1,79 @@
 // Write a function definition for the start button, then update eventListener with the name of the function
 // Change attribute on div to display none
 // Create for loop
+// Change CSS within function to hide welcome page div
+// Show questions div
+// Dynamically generate question and answer choices
+// addEventListener that listens for button clicks
+// Subtract from timer when answer is wrong
+// Need conditional statement
 
 console.log("Hello world!");
 
+
 questions = [
 {
-  firstQuestion: "CSS is a style sheet language used for describing the presentation of a document written in markup language.",
-  firstChoice: "True",
-  secondChoice: "False",
-  correctAnswer: "firstChoice",
+  question: "CSS is a style sheet language used for describing the presentation of a document written in markup language.",
+  choices: ["true", "false"],
+  correctAnswer: "true",
 },
 {
-  secondQuestion: "What does HTML stand for?",
-  firstChoice: "1. Hyperlink Text Markup Language",
-  secondChoice: "2. HyperText Markup Language",
-  thirdChoice: "3. HumanText Markup Language",
-  fourthChoice: "4. None of the above",
-  correctAnswer: "secondChoice",
+  question: "What does HTML stand for?",
+  choices: ["Hyperlink Text Markup Language","HyperText Markup Language","HumanText Markup Language","None of the above"],
+  correctAnswer: "HyperText Markup Language"
 },
 {
-  thirdQuestion: "Variables are the _____ of programming.",
-  firstChoice: "Adjectives",
-  secondChoice: "Verbs",
-  thirdChoice: "Nouns",
-  fourthChoice: "Adverbs",
-  correctAnswer: "thirdChoice",
+  question: "Variables are the _____ of programming.",
+  choices: ["Adjectives","Verbs","Nouns","Adverbs"],
+  correctAnswer: "Nouns"
 },
 {
-  fourthQuestion: "What are the four types of positioning in CSS?",
-  firstChoice: "Static",
-  secondChoice: "Relative",
-  thirdChoice: "Absolute",
-  fourthChoice: "Fixed",
-  fifthChoice: "All of the above",
-  correctAnswer: "fifthChoice",
+  question: "What are the four types of positioning in CSS?",
+  choices: ["Static","Relative","Absolute","Fixed","All of the above"],
+  correctAnswer: "All of the above"
 },
 {
-  fifthQuestion: "What does the concat method join together?",
-  firstChoice: "Two or more booleans",
-  secondChoice: "Two or more elements",
-  thirdChoice: "Two or more functions",
-  fourthChoice: "Two or more strings",
-  correctAnswer: "fourthChoice",
-},]
+  question: "What does the concat method join together?",
+  choices: ["Two or more booleans","Two or more elements","Two or more functions","Two or more strings"],
+  correctAnswer: "Two or more strings"
+}]
 
-var clickEl = document.getElementById("#start-now");
+var startButton = document.querySelector(".startBtn");
+var jumbotron = document.getElementById("welcome");
+var quizCard = document.getElementById("quiz-card");
 
-clickEl.addEventListener("click", function(){
+var Q = 0;
+
+startButton.addEventListener("click", function(){
+  jumbotron.setAttribute("class", "hide");
+  quizCard.removeAttribute("class", "hide");
+  questionCard();
+})
+
+function questionCard() {
+  var currentQuestion = questions[Q];
+
+  var questionEl = document.getElementById("question-title");
+  questionEl.textContent = currentQuestion.question;
+  var buttonBox = document.getElementById("button-box");
+  buttonBox.innerHTML = "";
+
+  currentQuestion.choices.forEach(function(choice) {
+    var answerBtn = document.createElement("button");
+    answerBtn.setAttribute("class", "btn-primary");
+    answerBtn.setAttribute("value", choice)
+    answerBtn.textContent = choice;
+    answerBtn.onclick = questionClick
+    buttonBox.appendChild(answerBtn);
+  })
+
 
 }
 
-var startButton = document.querySelector("#start-now");
-var hyperLinkButton = document.querySelector("hyperlink-text-markup-language");
-var hyperTextButton = document.querySelector("hypertext-markup-language");
-var humanTextButton = document.querySelector("humanText-markup-language");
-var noneOfButton = document.querySelector("none-of-the-above");
-var trueButton = document.querySelector("true");
-var falseButton = document.querySelector("false");
-var adjectiveButton = document.querySelector("adjectives");
-var verbButton = document.querySelector("verbs");
-var nounButton = document.querySelector("nouns");
-var adverbButton = document.querySelector("adverbs");
-var staticButton = document.querySelector("static");
-var relativeButton = document.querySelector("relative");
-var absoluteButton = document.querySelector("absolute");
-var fixedButton = document.querySelector("fixed");
-var allButton = document.querySelector("all-of-the-above");
-var booButton = document.querySelector("two-or-more-booleans");
-var eleButton = document.querySelector("two-or-more-elements");
-var funcButton = document.querySelector("two-or-more-functions");
-var strButton = document.querySelector("two-or-more-strings");
-
-startButton.addEventListener("click", function() {
-    localStorage.setItem("start");
-  });
-
-  // for (var i = 0; i < drinkList.length; i++) {
-  //   // 1. Create an element.
-  //   var drinkItem = document.createElement("p");
-  //   // 2. Add content
-  //   drinkItem.textContent = drinkList[i];
-  //   /
-
-if(hyperTextButton === true) {
-  alert("Correct!");
-} else {
-  (hyperLinkButton || humanTextButton || noneOfButton);
-  alert("Wrong!");
+function questionClick(){
+  console.log(this.value)
+  //if statements to check right or wrong 
+  Q++;
+  //if statement to check if Q === questions.length
+  questionCard();
 }
-
-if(trueButton === true) {
-  alert("Correct!");
-} else {
-  (falseButton === true);
-  alert("Wrong!"); 
-}
-
-if(nounButton === true) {
-  alert("Correct!");
-} else {
-  (adjectiveButton || verbButton || adverbButton === true);
-  alert("Wrong!");
-}
-
-if(allButton === true) {
-  alert("Correct!");
-} else {
-  (staticButton || relativeButton || absoluteButton || fixedButton === true);
-  alert("Wrong!");
-}
-
-if(strButton === true) {
-  alert("Correct!");
-} else {
-  (booButton || eleButton || funcButton === true) ;
-  alert("Wrong!");
-}  
-
-// function addScoreToList(event) {
-//   event.preventDefault();
-//   var name = nameEl.value;
-//   var li = document.createElement("li");
-//   li.id = people.length;
-//   li.innerHTML = name + " <button>edit</button>";
-//   people.push({ name: name });
-//   peopleListEl.append(li);
-// }

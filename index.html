@@ -8,16 +8,21 @@
     <title>Quiz</title>
   </head>
   <body>
-    
+     <!-- 4 separate divs, one for welcome, others for place for questions, third a div for timer, and finally a div for high scores -->
     <div class="wrapper">
-      <div class="jumbotron">
+      <div class="jumbotron" id="welcome">
         <h1 class="display-4">Coding Quiz</h1>
         <p class="lead">To take this quiz, answer as many questions correctly as possible. If you get an answer wrong, then the timer will start to decrease. Hit 'Start Now' below to get started.</p>
         <hr class="my-4">
         
         <p class="lead">
-          <a class="btn btn-primary btn-lg" href="#" role="button">Start Now</a>
+         <button class="btn-primary startBtn">Start</button>
         </p>
+      </div>
+      <div class="card hide" id="quiz-card">
+        <h4 id="question-title">Question Goes Here</h4>
+        <div id="button-box"></div>
+
       </div>
 
     <script src="./script.js"></script>

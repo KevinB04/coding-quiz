@@ -6,7 +6,9 @@ html {
 #welcome-page {
   display: block;
 }
-
+.hide {
+  display: none;
+}
 body {
     margin: 0;
     padding: 0;
