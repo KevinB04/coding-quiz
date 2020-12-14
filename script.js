@@ -59,7 +59,8 @@ var fixedButton = document.querySelector("fixed");
 var allButton = document.querySelector("all-of-the-above");
 var booButton = document.querySelector("two-or-more-booleans");
 var eleButton = document.querySelector("two-or-more-elements");
-var funcButton = document.querySelector("two-or-more-strings");
+var funcButton = document.querySelector("two-or-more-functions");
+var strButton = document.querySelector("two-or-more-strings");
 
 startButton.addEventListener("click", function() {
     localStorage.setItem("start");
@@ -68,27 +69,37 @@ startButton.addEventListener("click", function() {
 if(hyperTextButton === true) {
   alert("Correct!");
   return;
-} else(hyperLinkButton || humanTextButton || noneOfButton) {
+} else {
+  (hyperLinkButton || humanTextButton || noneOfButton);
   alert("Wrong!");
 }
 
 if(trueButton === true) {
   alert("Correct!");
   return;
-} else(falseButton === true) {
+} else {
+  (falseButton === true);
   alert("Wrong!"); 
 }
 
 if(nounButton === true) {
   alert("Correct!");
   return;
-} else(adjectiveButton || verbButton || adverbButton === true) {
+} else {
+  (adjectiveButton || verbButton || adverbButton === true);
   alert("Wrong!");
 }
 
 if(allButton === true) {
   alert("Correct!");
-} else(staticButton || relativeButton || absoluteButton || fixedButton === true) {
+} else {
+  (staticButton || relativeButton || absoluteButton || fixedButton === true);
   alert("Wrong!");
 }
 
+if(strButton === true) {
+  alert("Correct!");
+} else {
+  (booButton || eleButton || funcButton === true) ;
+  alert("Wrong!");
+}  
