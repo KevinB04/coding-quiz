@@ -45,6 +45,12 @@ questions = [
   correctAnswer: "fourthChoice",
 },]
 
+var clickEl = document.getElementById("#start-now");
+
+clickEl.addEventListener("click", function(){
+
+}
+
 var startButton = document.querySelector("#start-now");
 var hyperLinkButton = document.querySelector("hyperlink-text-markup-language");
 var hyperTextButton = document.querySelector("hypertext-markup-language");
@@ -69,6 +75,13 @@ var strButton = document.querySelector("two-or-more-strings");
 startButton.addEventListener("click", function() {
     localStorage.setItem("start");
   });
+
+  // for (var i = 0; i < drinkList.length; i++) {
+  //   // 1. Create an element.
+  //   var drinkItem = document.createElement("p");
+  //   // 2. Add content
+  //   drinkItem.textContent = drinkList[i];
+  //   /
 
 if(hyperTextButton === true) {
   alert("Correct!");
@@ -104,3 +117,13 @@ if(strButton === true) {
   (booButton || eleButton || funcButton === true) ;
   alert("Wrong!");
 }  
+
+// function addScoreToList(event) {
+//   event.preventDefault();
+//   var name = nameEl.value;
+//   var li = document.createElement("li");
+//   li.id = people.length;
+//   li.innerHTML = name + " <button>edit</button>";
+//   people.push({ name: name });
+//   peopleListEl.append(li);
+// }
