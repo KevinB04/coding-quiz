@@ -1,5 +1,46 @@
 console.log("Hello world!");
 
+questions = [
+{
+  firstQuestion: "CSS is a style sheet language used for describing the presentation of a document written in markup language.",
+  firstChoice: "True",
+  secondChoice: "False",
+  correctAnswer: "firstChoice",
+},
+{
+  secondQuestion: "What does HTML stand for?",
+  firstChoice: "1. Hyperlink Text Markup Language",
+  secondChoice: "2. HyperText Markup Language",
+  thirdChoice: "3. HumanText Markup Language",
+  fourthChoice: "4. None of the above",
+  correctAnswer: "secondChoice",
+},
+{
+  thirdQuestion: "Variables are the _____ of programming.",
+  firstChoice: "Adjectives",
+  secondChoice: "Verbs",
+  thirdChoice: "Nouns",
+  fourthChoice: "Adverbs",
+  correctAnswer: "thirdChoice",
+},
+{
+  fourthQuestion: "What are the four types of positioning in CSS?",
+  firstChoice: "Static",
+  secondChoice: "Relative",
+  thirdChoice: "Absolute",
+  fourthChoice: "Fixed",
+  fifthChoice: "All of the above",
+  correctAnswer: "fifthChoice",
+},
+{
+  fifthQuestion: "What does the concat method join together?",
+  firstChoice: "Two or more booleans",
+  secondChoice: "Two or more elements",
+  thirdChoice: "Two or more functions",
+  fourthChoice: "Two or more strings",
+  correctAnswer: "fourthChoice",
+},]
+
 var startButton = document.querySelector("#start-now");
 var hyperLinkButton = document.querySelector("hyperlink-text-markup-language");
 var hyperTextButton = document.querySelector("hypertext-markup-language");
@@ -16,6 +57,9 @@ var relativeButton = document.querySelector("relative");
 var absoluteButton = document.querySelector("absolute");
 var fixedButton = document.querySelector("fixed");
 var allButton = document.querySelector("all-of-the-above");
+var booButton = document.querySelector("two-or-more-booleans");
+var eleButton = document.querySelector("two-or-more-elements");
+var funcButton = document.querySelector("two-or-more-strings");
 
 startButton.addEventListener("click", function() {
     localStorage.setItem("start");
@@ -47,3 +91,4 @@ if(allButton === true) {
 } else(staticButton || relativeButton || absoluteButton || fixedButton === true) {
   alert("Wrong!");
 }
+
