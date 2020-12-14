@@ -21,26 +21,7 @@ body {
     background-color: lightblue;
 }
 
-#link {
+#link, #text, #human, #none, #true, #false, #adjective, #verb, #noun, #adverb, #static, #relative, #absolute, #fixed, #all {
     background-color: lightblue;
 }
 
-#text {
-    background-color: lightblue;
-}
-
-#human {
-    background-color: lightblue;
-}
-
-#none {
-    background-color: lightblue;
-}
-
-#true {
-    background-color: lightblue;
-}
-
-#false {
-    background-color: lightblue;
-}
