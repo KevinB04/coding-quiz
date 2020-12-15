@@ -10,19 +10,6 @@
 
 console.log("Hello world!");
 
-var startButton = document.querySelector(".startBtn");
-var jumbotron = document.getElementById("welcome");
-var quizCard = document.getElementById("quiz-card");
-var timer = document.getElementById("timer");
-
-var Q = 0;
-
-var timeInterval = setInterval(function(){
-  timer.innerText = count 
-  count--;
-}, 1000);
-
-
 questions = [
 {
   question: "CSS is a style sheet language used for describing the presentation of a document written in markup language.",
@@ -50,6 +37,19 @@ questions = [
   correctAnswer: "Two or more strings"
 }]
 
+var Q = 0;
+
+var startButton = document.querySelector(".startBtn");
+var jumbotron = document.getElementById("welcome");
+var quizCard = document.getElementById("quiz-card");
+var timeEl = document.getElementById("timer");
+var listView = document.createElement('ol');
+
+
+var timeInterval = setInterval(function(){
+  timer.innerText = count ;
+  count--;
+}, 1000);
 
 startButton.addEventListener("click", function(){
   jumbotron.setAttribute("class", "hide");
@@ -76,6 +76,9 @@ function questionCard() {
   })
 }
 
+timeEl.textContent = time;
+
+
 function questionClick(){
   if (this.value !== questions[Q].answer) {
     console.log('wrong');
@@ -88,3 +91,7 @@ function questionClick(){
   //if statement to check if Q === questions.length
   questionCard();
 }
+
+startButton.addEventListener("click", startQuiz);
+
+
