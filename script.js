@@ -79,6 +79,14 @@ function questionCard() {
 timeEl.textContent = time;
 
 
+//  for (var i = 0; i < questions[quizCard].answers.length; i++) {
+//    var answerBtn = document.createElement("button");
+//    answerBtn.textContent = questions[quizCard].answers[i];
+//    quizCard.append(answerBtn);
+//    answerBtn.addEventListener("click", function() {
+//    }
+
+
 function questionClick(){
   if (this.value !== questions[Q].answer) {
     console.log('wrong');
