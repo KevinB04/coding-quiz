@@ -10,6 +10,18 @@
 
 console.log("Hello world!");
 
+var startButton = document.querySelector(".startBtn");
+var jumbotron = document.getElementById("welcome");
+var quizCard = document.getElementById("quiz-card");
+var timer = document.getElementById("timer");
+
+var Q = 0;
+
+var timeInterval = setInterval(function(){
+  timer.innerText = count 
+  count--;
+}, 1000);
+
 
 questions = [
 {
@@ -38,17 +50,13 @@ questions = [
   correctAnswer: "Two or more strings"
 }]
 
-var startButton = document.querySelector(".startBtn");
-var jumbotron = document.getElementById("welcome");
-var quizCard = document.getElementById("quiz-card");
-
-var Q = 0;
 
 startButton.addEventListener("click", function(){
   jumbotron.setAttribute("class", "hide");
   quizCard.removeAttribute("class", "hide");
   questionCard();
 })
+
 
 function questionCard() {
   var currentQuestion = questions[Q];
@@ -66,13 +74,15 @@ function questionCard() {
     answerBtn.onclick = questionClick
     buttonBox.appendChild(answerBtn);
   })
-
-
 }
 
 function questionClick(){
-  console.log(this.value)
-  if()
+  if (this.value !== questions[Q].answer) {
+    console.log('wrong');
+  } else {
+    correct.push(questions[Q]);
+    console.log(correct);
+  }
   //if statements to check right or wrong 
   Q++;
   //if statement to check if Q === questions.length
