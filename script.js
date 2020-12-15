@@ -72,6 +72,7 @@ function questionCard() {
 
 function questionClick(){
   console.log(this.value)
+  if()
   //if statements to check right or wrong 
   Q++;
   //if statement to check if Q === questions.length
