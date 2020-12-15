@@ -8,9 +8,7 @@ Download this project from the repo, and text your coding knowledge with my quiz
 
 <<<<<<< HEAD
 
-## Contributing 
-My tutor, Corey Yates, for helping me understand the material better and to be able to draft up a good quiz.
-=======
+
 ## Contributing 
 My tutor, Corey Yates, helped me understand the material better and was able to help me draft a good quiz.
 
