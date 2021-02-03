@@ -1,5 +1,12 @@
 # coding-quiz
 
+## Table of Contents
+   - [Installation](#installation)
+   - [Usage](#usage)
+   - [Contributions](#Contributions)
+   - [Credits](#credits)
+   - [License](#license)
+
 ## Installation
 Download this project from the repo, and text your coding knowledge with my quiz!
 
@@ -9,7 +16,7 @@ Download this project from the repo, and text your coding knowledge with my quiz
 
 ![quiz](/assets/images/Coding.jpg)
 
-## Contributing 
+## Contributions 
 Not accepting contributions at this time.
 
 ## Credits
